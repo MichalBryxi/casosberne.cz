@@ -11,15 +11,14 @@ export default {
     1: {
       heading: 'Vyfoť',
       message: 'Pomocí stojanu udělej stejnou unifikovanou fotku.'
+    },
+    2: {
+      heading: 'Nasdílej',
+      message: 'Nahraj fotku na Twitter a označ příslušným hashtagem.'
+    },
+    3: {
+      heading: 'Prohlížej',
+      message: 'Systém fotografie najde a posbírá, abyste si je mohli prohlédnout.'
     }
   }
-  // "some.translation.key": "Text for some.translation.key",
-  //
-  // "a": {
-  //   "nested": {
-  //     "key": "Text for a.nested.key"
-  //   }
-  // },
-  //
-  // "key.with.interpolation": "Text with {{anInterpolation}}"
 };
