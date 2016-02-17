@@ -1,18 +1,66 @@
-<div class="jumbotron">
-  <h1 class="display-3">{{{t 'index.heading'}}}</h1>
+<div class="index-jumbotron">
+  <div class="container">
+    <h1 class="display-3">{{{t "index.heading"}}}</h1>
+    <p>
+      {{t "index.message"}}
+    </p>
+    <p>
+      {{#link-to "projects" class="btn btn-primary btn-lg" role="button"}}
+        {{t "index.goToProjects"}}
+        {{fa-icon "fa-chevron-right"}}
+      {{/link-to}}
+    </p>
+  </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <h2>{{t 'index.1.heading'}}</h2>
-    <p>{{t 'index.1.message'}}</p>
+
+<div class="container">
+  <div class="index-wizzard-row">
+    <div class="col-md-4">
+      <h2>
+        {{#fa-stack}}
+          {{fa-icon "fa-square-o" stack=2}}
+          {{fa-icon "fa-camera" stack=1}}
+        {{/fa-stack}}
+        {{t "index.1.heading"}}
+      </h2>
+      <p>
+        {{t "index.1.message"}}
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        {{#fa-stack}}
+          {{fa-icon "fa-square-o" stack=2}}
+          {{fa-icon "fa-twitter" stack=1}}
+        {{/fa-stack}}
+        {{t "index.2.heading"}}
+      </h2>
+      <p>
+        {{t "index.2.message"}}
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        {{#fa-stack}}
+          {{fa-icon "fa-square-o" stack=2}}
+          {{fa-icon "fa-eye" stack=1}}
+        {{/fa-stack}}
+        {{t "index.3.heading"}}
+      </h2>
+      <p>
+        {{t "index.3.message"}}
+      </p>
+    </div>
   </div>
-  <div class="col-md-4">
-    <h2>{{t 'index.2.heading'}}</h2>
-    <p>{{t 'index.2.message'}}</p>
-  </div>
-  <div class="col-md-4">
-    <h2>{{t 'index.3.heading'}}</h2>
-    <p>{{t 'index.3.message'}}</p>
+</div>
+
+<div class="container">
+  <div class="index-trees-row">
+    <div class="col-md-12">
+      <img src="/trees.jpg" class="img-fluid" />
+    </div>
   </div>
 </div>

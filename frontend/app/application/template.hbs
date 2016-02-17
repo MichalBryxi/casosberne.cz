@@ -1,32 +1,35 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" />
+      </a>
+      <ul class="nav navbar-nav">
+        {{#link-to "index" class="nav-item" tagName="li"}}
+          {{#link-to "index" class="nav-link"}}
+            {{t "menu.home"}}
+          {{/link-to}}
+        {{/link-to}}
+
+        {{#link-to "projects" class="nav-item" tagName="li"}}
+          {{#link-to "projects" class="nav-link"}}
+            {{t "menu.projects"}}
+          {{/link-to}}
+        {{/link-to}}
+
+        {{#link-to "contact" class="nav-item" tagName="li"}}
+          {{#link-to "contact" class="nav-link"}}
+            {{t "menu.contact"}}
+          {{/link-to}}
+        {{/link-to}}
+      </ul>
+  </div>
+</nav>
+
+{{outlet}}
+
 <div class="container">
-  <nav class="navbar navbar-static-top navbar-dark bg-inverse">
-    <a class="navbar-brand" href="#">
-      <img src="logo.png" />
-    </a>
-    <ul class="nav navbar-nav">
-      {{#link-to "index" class="nav-item" tagName="li"}}
-        {{#link-to "index" class="nav-link"}}
-          {{t "menu.home"}}
-        {{/link-to}}
-      {{/link-to}}
-
-      {{#link-to "projects" class="nav-item" tagName="li"}}
-        {{#link-to "projects" class="nav-link"}}
-          {{t "menu.projects"}}
-        {{/link-to}}
-      {{/link-to}}
-
-      {{#link-to "contact" class="nav-item" tagName="li"}}
-        {{#link-to "contact" class="nav-link"}}
-          {{t "menu.contact"}}
-        {{/link-to}}
-      {{/link-to}}
-    </ul>
-  </nav>
-
-  {{outlet}}
-
   <footer>
-    <p>© Company 2015</p>
+    <hr />
+    <p>© Nikdo 2016</p>
   </footer>
 </div>

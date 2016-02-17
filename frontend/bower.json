@@ -12,6 +12,7 @@
     "jquery": "1.11.3",
     "loader.js": "ember-cli/loader.js#3.4.0",
     "qunit": "~1.20.0",
-    "tether": "^1.0.3"
+    "tether": "^1.0.3",
+    "font-awesome": "~4.5.0"
   }
 }

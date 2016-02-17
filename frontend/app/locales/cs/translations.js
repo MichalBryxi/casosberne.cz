@@ -7,6 +7,8 @@ export default {
 
   index: {
     heading: 'Tajm&mdash;Lapster',
+    message: 'Různí lidé za pomocí svých mobilních telefonů a sociálních sítí vytváří časosběrná videa zajímavých míst.',
+    goToProjects: 'Prohlížet projekty',
 
     1: {
       heading: 'Vyfoť',

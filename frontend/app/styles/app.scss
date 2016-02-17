@@ -3,3 +3,21 @@
 .navbar-brand img {
   height: 1.5em;
 }
+
+
+
+.index {
+  &-trees-row {
+    margin-top: 15em;
+  }
+  &-wizzard-row {
+    @extend .row;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  &-jumbotron {
+    @extend .jumbotron;
+
+    margin-top: 50px;
+  }
+}
