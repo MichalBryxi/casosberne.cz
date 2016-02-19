@@ -4,7 +4,9 @@
   height: 1.5em;
 }
 
-
+.after-navbar {
+  margin-top: 70px;
+}
 
 .index {
   &-trees-row {
@@ -17,7 +19,5 @@
   }
   &-jumbotron {
     @extend .jumbotron;
-
-    margin-top: 50px;
   }
 }
