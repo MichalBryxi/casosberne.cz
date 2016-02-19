@@ -11,5 +11,25 @@ projects = Project.create([
     name: 'Křížek u Vejprnic',
     description: 'Foo bar',
     hashtag: 'plzenCasosberne',
+  },
+  {
+    name: 'Křížek u Vejprnic',
+    description: 'Foo bar',
+    hashtag: 'plzenCasosberne',
+  },
+  {
+    name: 'Křížek u Vejprnic',
+    description: 'Foo bar',
+    hashtag: 'plzenCasosberne',
+  },
+  {
+    name: 'Křížek u Vejprnic',
+    description: 'Foo bar',
+    hashtag: 'plzenCasosberne',
+  },
+  {
+    name: 'Křížek u Vejprnic',
+    description: 'Foo bar',
+    hashtag: 'plzenCasosberne',
   }
 ])
