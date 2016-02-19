@@ -11,19 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219062140) do
+ActiveRecord::Schema.define(version: 20160220143310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "parsers", force: :cascade do |t|
+    t.string   "domain"
+    t.string   "css_selector"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "body"
+    t.string   "image"
+    t.integer  "project_id"
+    t.integer  "parser_id"
+    t.boolean  "parsed",     default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "hashtag"
-    t.integer  "posts_count", default: 0, null: false
-    t.integer  "cursor"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "image"
+    t.integer  "posts_count",                default: 0, null: false
+    t.decimal  "cursor",      precision: 24
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
 end

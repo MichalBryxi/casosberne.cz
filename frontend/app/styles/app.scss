@@ -1,23 +1,2 @@
-@import 'bootstrap';
-
-.navbar-brand img {
-  height: 1.5em;
-}
-
-.after-navbar {
-  margin-top: 70px;
-}
-
-.index {
-  &-trees-row {
-    margin-top: 15em;
-  }
-  &-wizzard-row {
-    @extend .row;
-    margin-top: 5em;
-    margin-bottom: 5em;
-  }
-  &-jumbotron {
-    @extend .jumbotron;
-  }
-}
+@import 'materialize';
+@import 'ember-cli-materialize';

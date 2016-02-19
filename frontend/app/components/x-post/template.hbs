@@ -1,0 +1,11 @@
+{{#md-card image=post.image
+  activator=true}}
+
+  {{#md-card-reveal}}
+    {{post.body}}
+    <hr />
+    <em>
+      {{post.createdAt}}
+    </em>
+  {{/md-card-reveal}}
+{{/md-card}}

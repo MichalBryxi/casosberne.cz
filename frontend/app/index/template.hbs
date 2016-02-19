@@ -1,66 +1,61 @@
-<div class="index-jumbotron after-navbar">
-  <div class="container">
-    <h1 class="display-3">{{{t "index.heading"}}}</h1>
-    <p>
-      {{t "index.message"}}
-    </p>
-    <p>
-      {{#link-to "projects" class="btn btn-primary btn-lg" role="button"}}
-        {{t "index.goToProjects"}}
-        {{fa-icon "fa-chevron-right"}}
-      {{/link-to}}
-    </p>
-  </div>
-</div>
+{{#md-card title=(t "index.heading") id="basic-card"}}
+  {{#md-card-content}}
+    {{t "index.message"}}
+  {{/md-card-content}}
+  {{#md-card-action}}
+    {{#link-to "projects"}}
+      {{t "index.goToProjects"}}
+      {{fa-icon "fa-chevron-right"}}
+    {{/link-to}}
+  {{/md-card-action}}
+{{/md-card}}
 
-
-<div class="container">
-  <div class="index-wizzard-row">
-    <div class="col-md-4">
-      <h2>
+<div class="row">
+  <div class="col s12 m4">
+    {{#md-card-panel class="teal" bodyClass="white-text"}}
+      <h5>
         {{#fa-stack}}
           {{fa-icon "fa-square-o" stack=2}}
           {{fa-icon "fa-camera" stack=1}}
         {{/fa-stack}}
         {{t "index.1.heading"}}
-      </h2>
+      </h5>
+
       <p>
         {{t "index.1.message"}}
       </p>
-    </div>
+    {{/md-card-panel}}
+  </div>
 
-    <div class="col-md-4">
-      <h2>
+  <div class="col s12 m4">
+    {{#md-card-panel class="teal" bodyClass="white-text"}}
+      <h5>
         {{#fa-stack}}
           {{fa-icon "fa-square-o" stack=2}}
           {{fa-icon "fa-twitter" stack=1}}
         {{/fa-stack}}
         {{t "index.2.heading"}}
-      </h2>
+      </h5>
+
       <p>
         {{t "index.2.message"}}
       </p>
-    </div>
+    {{/md-card-panel}}
+  </div>
 
-    <div class="col-md-4">
-      <h2>
+  <div class="col s12 m4">
+    {{#md-card-panel class="teal" bodyClass="white-text"}}
+      <h5>
         {{#fa-stack}}
           {{fa-icon "fa-square-o" stack=2}}
           {{fa-icon "fa-eye" stack=1}}
         {{/fa-stack}}
         {{t "index.3.heading"}}
-      </h2>
+      </h5>
+
       <p>
         {{t "index.3.message"}}
       </p>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="index-trees-row">
-    <div class="col-md-12">
-      <img src="/trees.jpg" class="img-fluid" />
-    </div>
+    {{/md-card-panel}}
   </div>
 </div>

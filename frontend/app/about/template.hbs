@@ -1,5 +1,20 @@
-<div class="container after-navbar">
-  <h2>{{t 'about.heading'}}</h2>
+<div class="row">
+  <div class="col s12 l6">
+    <h2>
+      {{t "about.heading"}}
+    </h2>
+    <p>
+      {{!md-text text=(t "about.message")}}
+      {{t "about.message"}}
+    </p>
+  </div>
 
-  {{md-text text=(t 'about.message')}}
+  <div class="col s12 l6">
+    <h2>
+      {{t "about.exampleTweet"}}
+    </h2>
+
+    {{#md-card image="http://i.imgur.com/ttQQy1Q.png"}}
+    {{/md-card}}
+  </div>
 </div>

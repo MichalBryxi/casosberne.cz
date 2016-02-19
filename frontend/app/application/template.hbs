@@ -1,43 +1,34 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-  <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="logo.png" />
-      </a>
-      <ul class="nav navbar-nav">
-        {{#link-to "index" class="nav-item" tagName="li"}}
-          {{#link-to "index" class="nav-link"}}
-            {{t "menu.home"}}
-          {{/link-to}}
-        {{/link-to}}
+{{#md-navbar name=(t "index.heading") class='indigo'}}
+  {{#link-to "index" tagName="li"}}
+    {{#link-to "index"}}
+      {{t "menu.home"}}
+    {{/link-to}}
+  {{/link-to}}
 
-        {{#link-to "projects" class="nav-item" tagName="li"}}
-          {{#link-to "projects" class="nav-link"}}
-            {{t "menu.projects"}}
-          {{/link-to}}
-        {{/link-to}}
+  {{#link-to "projects" tagName="li"}}
+    {{#link-to "projects"}}
+      {{t "menu.projects"}}
+    {{/link-to}}
+  {{/link-to}}
 
-        {{#link-to "contact" class="nav-item" tagName="li"}}
-          {{#link-to "contact" class="nav-link"}}
-            {{t "menu.contact"}}
-          {{/link-to}}
-        {{/link-to}}
+  {{#link-to "contact" tagName="li"}}
+    {{#link-to "contact"}}
+      {{t "menu.contact"}}
+    {{/link-to}}
+  {{/link-to}}
 
-        {{#link-to "about" class="nav-item pull-xs-right" tagName="li"}}
-          {{#link-to "about" class="nav-link"}}
-            {{t "menu.about"}}
-          {{/link-to}}
-        {{/link-to}}
-      </ul>
-  </div>
-</nav>
+  {{#link-to "about" tagName="li"}}
+    {{#link-to "about"}}
+      {{t "menu.about"}}
+    {{/link-to}}
+  {{/link-to}}
+{{/md-navbar}}
 
 <div class="container">
   {{outlet}}
 </div>
 
-<div class="container">
-  <footer>
-    <hr />
-    <p>© Nikdo 2016</p>
-  </footer>
-</div>
+<footer class='page-footer light-blue white-text'>
+  {{#md-copyright text='Copyright Text' startYear=2016 class='light-blue darken-2 white-text'}}
+  {{/md-copyright}}
+</footer>

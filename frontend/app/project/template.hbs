@@ -1,0 +1,40 @@
+<br />
+
+<div class="row">
+  <div class="col s6">
+    {{#link-to "projects"}}
+      {{fa-icon icon="fa-chevron-left"}}
+      {{t "project.allProjects"}}
+    {{/link-to}}
+  </div>
+
+  <div class="col s6 right-align">
+    <a href="https://twitter.com/search?q=%23{{model.hashtag}}&src=typd">
+      {{fa-icon icon="fa-twitter"}}
+    </a>
+  </div>
+</div>
+
+<h2>
+  {{model.name}}
+</h2>
+
+<p>
+  <strong>
+    #{{model.hashtag}}
+  </strong>
+</p>
+
+<p>
+  {{model.description}}
+</p>
+
+<div class="row">
+  {{#each model.posts as |post|}}
+    {{#if post.image}}
+      <div class="col s12 m6 l4">
+        {{x-post post=post}}
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

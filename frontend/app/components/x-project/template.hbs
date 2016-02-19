@@ -1,0 +1,13 @@
+{{#md-card title=project.name
+  image=project.image
+  activator=true}}
+  {{#md-card-content}}
+      {{#link-to "project" project.id}}
+        {{t "projects.goToProject"}} #{{project.hashtag}}
+      {{/link-to}}
+  {{/md-card-content}}
+
+  {{#md-card-reveal}}
+    {{project.description}}
+  {{/md-card-reveal}}
+{{/md-card}}
