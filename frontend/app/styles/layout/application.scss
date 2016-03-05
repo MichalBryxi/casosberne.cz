@@ -16,10 +16,18 @@
 }
 
 footer.page-footer {
-  background-color: $color-4-0;
+  background-color: $color-4-1;
 
   .copyright {
-    background-color: $color-4-3;
+    background-color: $color-4-2;
     color: $color-3-1;
+  }
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+  color: $color-4-0;
+
+  &:hover {
+    color: $color-4-3;
   }
 }

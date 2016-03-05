@@ -1,0 +1,20 @@
+.contact-card {
+  margin-top: 7em;
+  background-color: $color-2-0;
+  color: $color-3-1;
+
+  a {
+    color: $color-3-0;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+
+.contact-col {
+  @extend .col;
+  @extend .s12;
+  @extend .center-align;
+
+  font-size: 2em;
+  margin-top: 5em;
+}

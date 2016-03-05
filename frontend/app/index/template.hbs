@@ -1,20 +1,6 @@
-{{#md-card
-  image="/images/timelapse.jpg"
-  id="basic-card"}}
-  {{#md-card-content}}
-    {{t "index.message"}}
-  {{/md-card-content}}
-  {{#md-card-action}}
-    {{#link-to "projects"}}
-      {{t "index.goToProjects"}}
-      {{fa-icon "fa-chevron-right"}}
-    {{/link-to}}
-  {{/md-card-action}}
-{{/md-card}}
-
 <div class="row">
   <div class="col s12 m4">
-    {{#md-card-panel class="teal" bodyClass="white-text"}}
+    {{#md-card-panel class="index-card"}}
       <h5>
         {{#fa-stack}}
           {{fa-icon "fa-square-o" stack=2}}
@@ -30,7 +16,7 @@
   </div>
 
   <div class="col s12 m4">
-    {{#md-card-panel class="teal" bodyClass="white-text"}}
+    {{#md-card-panel class="index-card"}}
       <h5>
         {{#fa-stack}}
           {{fa-icon "fa-square-o" stack=2}}
@@ -46,7 +32,7 @@
   </div>
 
   <div class="col s12 m4">
-    {{#md-card-panel class="teal" bodyClass="white-text"}}
+    {{#md-card-panel class="index-card"}}
       <h5>
         {{#fa-stack}}
           {{fa-icon "fa-square-o" stack=2}}
@@ -61,3 +47,17 @@
     {{/md-card-panel}}
   </div>
 </div>
+
+{{#md-card
+  image="/images/timelapse.jpg"
+  id="basic-card"}}
+  {{#md-card-content}}
+    {{t "index.message"}}
+  {{/md-card-content}}
+  {{#md-card-action}}
+    {{#link-to "projects"}}
+      {{t "index.goToProjects"}}
+      {{fa-icon "fa-chevron-right"}}
+    {{/link-to}}
+  {{/md-card-action}}
+{{/md-card}}

@@ -1,0 +1,11 @@
+.index-card {
+  background-color: $color-2-0;
+  color: $color-3-1;
+  min-height: 100%;
+
+  a {
+    color: $color-3-0;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}

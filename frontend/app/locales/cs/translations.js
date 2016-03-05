@@ -9,20 +9,20 @@ export default {
 
   index: {
     heading: 'Tajm Lapster',
-    message: 'Různí lidé za pomocí svých mobilních telefonů a sociálních sítí vytváří časosběrná videa zajímavých míst.',
+    message: 'Lidé za pomocí svých mobilních telefonů a sociálních sítí vytváří časosběrná videa zajímavých míst.',
     goToProjects: 'Prohlížet projekty',
 
     1: {
       heading: 'Vyfoť',
-      message: 'Pomocí stojanu udělej stejnou unifikovanou fotku.'
+      message: 'Najdi <a href="/#/timelapsters">stojan</a>. Pomocí něho udělej fotku.'
     },
     2: {
       heading: 'Nasdílej',
-      message: 'Nahraj fotku na Twitter a označ příslušným hashtagem.'
+      message: 'Nahraj fotku na Twitter a označ hashtagem, který najdeš na stojanu.'
     },
     3: {
       heading: 'Prohlížej',
-      message: 'Systém fotografie najde a posbírá, abyste si je mohli prohlédnout.'
+      message: 'Systém fotografie najde, posbírá a zařadí do jednotlivých <a href="/#/projects">projektů</a>.'
     }
   },
 
@@ -32,6 +32,10 @@ export default {
 
   project: {
     allProjects: 'všechny projekty'
+  },
+
+  contact: {
+    heading: 'Kontakt'
   },
 
   about: {
