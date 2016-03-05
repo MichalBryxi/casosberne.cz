@@ -11,6 +11,7 @@
   <div class="col s6 right-align">
     <a href="https://twitter.com/search?q=%23{{model.hashtag}}&src=typd">
       {{fa-icon icon="fa-twitter"}}
+      #{{model.hashtag}}
     </a>
   </div>
 </div>
@@ -20,19 +21,18 @@
 </h2>
 
 <p>
-  <strong>
-    #{{model.hashtag}}
-  </strong>
+  {{md-text text=model.description}}
 </p>
 
-<p>
-  {{model.description}}
-</p>
+{{#md-card title=model.name
+    image=model.image}}
+{{/md-card}}
+
 
 <div class="row">
   {{#each model.posts as |post|}}
     {{#if post.image}}
-      <div class="col s12 m6 l4">
+      <div class="col s4 m3 l2">
         {{x-post post=post}}
       </div>
     {{/if}}

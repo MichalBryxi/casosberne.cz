@@ -47,15 +47,18 @@ class Project < ActiveRecord::Base
   def gif
     self.posts.each do |post|
       puts "Uploading #{post.image} to Cloudinary"
-      url = Cloudinary::Utils.cloudinary_url(post.image,
-      :width => 280, :height => 150, :crop => :fill)
+      url = Cloudinary::Utils.cloudinary_url(
+              post.image,
+              :width => 280,
+              :height => 150,
+              :crop => :fill)
 
       Cloudinary::Uploader.upload(url,
         :public_id => "project_#{self.hashtag}_#{post.id}",
         :tags => "project_#{self.hashtag}")
     end
 
-    gif = Cloudinary::Uploader.multi("project_#{self.hashtag}", type:"gif", delay: 500)
+    gif = Cloudinary::Uploader.multi("project_#{self.hashtag}", type:"gif", delay: 1000)
     self.image = gif['url']
     self.save!
   end

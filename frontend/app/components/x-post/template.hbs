@@ -1,11 +1,7 @@
-{{#md-card image=post.image
-  activator=true}}
+<div class="card-image">
+  <img src={{post.image}}>
+</div>
 
-  {{#md-card-reveal}}
-    {{post.body}}
-    <hr />
-    <em>
-      {{post.createdAt}}
-    </em>
-  {{/md-card-reveal}}
-{{/md-card}}
+<span class="card-content">
+  {{date}}
+</span>
