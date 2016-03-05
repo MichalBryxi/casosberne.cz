@@ -1,5 +1,6 @@
 export default {
   menu: {
+    name: 'TAJM LAPSTER<',
     home: 'Domů',
     projects: 'Projekty',
     contact: 'Kontakt',
@@ -7,7 +8,7 @@ export default {
   },
 
   index: {
-    heading: 'Tajm&mdash;Lapster',
+    heading: 'Tajm Lapster',
     message: 'Různí lidé za pomocí svých mobilních telefonů a sociálních sítí vytváří časosběrná videa zajímavých míst.',
     goToProjects: 'Prohlížet projekty',
 

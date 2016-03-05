@@ -1,0 +1,25 @@
+.application-container {
+  @extend .container;
+
+  min-height: 80vh;
+}
+
+.navbar {
+  background-color: $color-1-0;
+  a {
+    color: $color-3-0;
+  }
+
+  .brand-logo {
+    font-family: BTTF;
+  }
+}
+
+footer.page-footer {
+  background-color: $color-4-0;
+
+  .copyright {
+    background-color: $color-4-3;
+    color: $color-3-1;
+  }
+}

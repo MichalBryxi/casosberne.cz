@@ -1,4 +1,4 @@
-{{#md-navbar name=(t "index.heading") class='indigo'}}
+{{#md-navbar name=(t "menu.name") class='navbar'}}
   {{#link-to "index" tagName="li"}}
     {{#link-to "index"}}
       {{t "menu.home"}}
@@ -24,11 +24,11 @@
   {{/link-to}}
 {{/md-navbar}}
 
-<div class="container">
+<div class="application-container">
   {{outlet}}
 </div>
 
-<footer class='page-footer light-blue white-text'>
-  {{#md-copyright text='Copyright Text' startYear=2016 class='light-blue darken-2 white-text'}}
+<footer class='page-footer'>
+  {{#md-copyright text='Copyright Text' startYear=2016 class='copyright'}}
   {{/md-copyright}}
 </footer>
