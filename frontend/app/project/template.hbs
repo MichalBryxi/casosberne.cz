@@ -20,6 +20,24 @@
   {{model.name}}
 </h2>
 
+<div class="fixed-action-btn horizontal click-to-toggle">
+  <a class="btn-floating btn-large red">
+    <i class="large mdi-content-add"></i>
+  </a>
+  <ul>
+    <li>
+      <a href="mailto:casosberne@gmail.com?subject=#{{model.hashtag}}" class="btn-floating red">
+        {{fa-icon icon="envelope"}}
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/intent/tweet?hashtags={{model.hashtag}}" class="btn-floating blue">
+        {{fa-icon icon="twitter"}}
+      </a>
+    </li>
+  </ul>
+</div>
+
 <p>
   {{md-text text=model.description}}
 </p>
