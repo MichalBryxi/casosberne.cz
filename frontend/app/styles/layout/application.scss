@@ -1,7 +1,7 @@
 .application-container {
   @extend .container;
 
-  min-height: 80vh;
+  min-height: calc(100vh - 70px - 20px - 56px);
 }
 
 .nav-wrapper {
