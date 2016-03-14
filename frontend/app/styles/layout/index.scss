@@ -1,7 +1,20 @@
+.index-row {
+  @extend .row;
+  display: flex;
+  flex-direction: row;
+}
+
+.index-col {
+  @extend .col;
+  @extend .s12;
+  @extend .m4;
+  flex: auto;
+}
+
 .index-card {
   background-color: $color-2-0;
   color: $color-3-1;
-  min-height: 100%;
+  height: 100%;
 
   a {
     color: $color-3-0;
