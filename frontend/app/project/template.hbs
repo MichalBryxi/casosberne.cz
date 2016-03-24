@@ -46,13 +46,12 @@
     image=model.image}}
 {{/md-card}}
 
-
 <div class="row">
-  {{#each model.posts as |post|}}
-    {{#if post.image}}
+  {{#photo-swipe items=photos as |post|}}
+    {{#if post.src}}
       <div class="col s4 m3 l2">
         {{x-post post=post}}
       </div>
     {{/if}}
-  {{/each}}
+  {{/photo-swipe}}
 </div>
