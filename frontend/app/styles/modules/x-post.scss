@@ -1,4 +1,12 @@
-.card-content {
-  word-break: break-all;
-  word-wrap: break-word;
+.x-post {
+  @extend .card;
+  cursor: pointer;
+
+  .card-image {
+    .card-title {
+      font-size: 1em;
+      padding: 5px;
+      text-shadow: 2px 2px 8px #000;
+    }
+  }
 }
