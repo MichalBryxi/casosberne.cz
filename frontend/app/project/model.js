@@ -6,5 +6,5 @@ export default DS.Model.extend({
   image: DS.attr('string'),
   hashtag: DS.attr('string'),
 
-  posts: DS.hasMany('post', {async: true})
+  posts: DS.hasMany('post', { async: true })
 });
