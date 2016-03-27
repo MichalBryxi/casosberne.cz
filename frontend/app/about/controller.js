@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   i18n: Ember.inject.service(),
 
-  // aboutMessage: Ember.computed(function () {
+  // aboutMessage: Ember.computed(function() {
   //   return this.get('i18n').t('about.message');
   // })
 
