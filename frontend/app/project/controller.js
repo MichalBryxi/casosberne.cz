@@ -13,5 +13,9 @@ export default Ember.Controller.extend({
     let createdAt = post.get('createdAt');
 
     return { src, w, h, title, createdAt };
+  }),
+
+  photosSorted: Ember.computed.sort('photos', (a, b) => {
+    return a.createdAt < b.createdAt;
   })
 });

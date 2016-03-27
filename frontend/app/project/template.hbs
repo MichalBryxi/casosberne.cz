@@ -43,7 +43,7 @@
 </p>
 
 <div class="row">
-  {{#photo-swipe items=photos as |elm|}}
+  {{#photo-swipe items=photosSorted as |elm|}}
     {{#if elm.src}}
       <div class="col s4 m3 l2">
         {{x-post post=elm}}
