@@ -10,7 +10,8 @@ export default Ember.Controller.extend({
     let w = 800;
     let h = 600;
     let src = post.get('image');
+    let createdAt = post.get('createdAt');
 
-    return { src, w, h, title };
+    return { src, w, h, title, createdAt };
   })
 });

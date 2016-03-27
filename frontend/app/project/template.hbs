@@ -43,10 +43,10 @@
 </p>
 
 <div class="row">
-  {{#photo-swipe items=photos as |post|}}
-    {{#if post.src}}
+  {{#photo-swipe items=photos as |elm|}}
+    {{#if elm.src}}
       <div class="col s4 m3 l2">
-        {{x-post post=post}}
+        {{x-post post=elm}}
       </div>
     {{/if}}
   {{/photo-swipe}}
