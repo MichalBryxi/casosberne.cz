@@ -15,6 +15,7 @@
     "font-awesome": "~4.5.0",
     "remarkable": "^1.6.2",
     "highlightjs": "^9.1.0",
-    "materialize": "~0.97.0"
+    "materialize": "~0.97.0",
+    "photoswipe": "4.1.0"
   }
 }
