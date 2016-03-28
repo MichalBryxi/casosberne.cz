@@ -7,8 +7,8 @@ export default Ember.Controller.extend({
     let body = linkify(post.get('body'));
 
     let title = `${date} - ${body}`;
-    let w = 800;
-    let h = 600;
+    let w = 600;
+    let h = 338;
     let src = post.get('image');
     let createdAt = post.get('createdAt');
 
