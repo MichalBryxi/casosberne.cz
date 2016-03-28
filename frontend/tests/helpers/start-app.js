@@ -14,5 +14,8 @@ export default function startApp(attrs) {
     application.injectTestHelpers();
   });
 
+  // ember-cli-mirage will log queries
+  server.logging = true;
+
   return application;
 }

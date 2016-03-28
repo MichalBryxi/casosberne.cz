@@ -16,8 +16,8 @@
   </div>
 </div>
 
-<h2>
-  {{model.name}}
+<h2 class="project-heading">
+  {{~ model.name ~}}
 </h2>
 
 <div class="fixed-action-btn horizontal click-to-toggle">
@@ -38,16 +38,14 @@
   </ul>
 </div>
 
-<p>
-  {{md-text text=model.description}}
+<p class="project-description">
+  {{~ md-text text=model.description ~}}
 </p>
 
 <div class="row">
   {{#photo-swipe items=photosSorted as |elm|}}
-    {{#if elm.src}}
-      <div class="col s4 m3 l2">
-        {{x-post post=elm}}
-      </div>
-    {{/if}}
+    <div class="col s4 m3 l2">
+      {{x-post post=elm}}
+    </div>
   {{/photo-swipe}}
 </div>
