@@ -5,7 +5,7 @@ default: &default
 
 development:
   <<: *default
-  database: casosberne-staging
+  database: casosberne
 
 test:
   <<: *default
