@@ -5,7 +5,7 @@ import moment from 'moment';
 export default Ember.Controller.extend({
   i18n: Ember.inject.service(),
 
-  tabs: Ember.computed(function () {
+  tabs: Ember.computed(function() {
     return [
       { id: 'description', title: this.get('i18n').t('project.description') },
       { id: 'map', title: this.get('i18n').t('project.map') }
