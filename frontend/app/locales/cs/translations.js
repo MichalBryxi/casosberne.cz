@@ -33,7 +33,8 @@ export default {
   project: {
     allProjects: 'všechny projekty',
     description: 'Popis',
-    map: 'Mapa'
+    map: 'Mapa',
+    projectLink: 'zpátky na projekt'
   },
 
   contact: {
