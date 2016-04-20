@@ -1,3 +1,19 @@
+<div class="row">
+  <div class="col s6">
+    {{#link-to "project.description" model.id}}
+      {{fa-icon icon="fa-chevron-left"}}
+      {{t "project.projectLink"}}
+    {{/link-to}}
+  </div>
+
+  <div class="col s6 right-align">
+    <a href="https://twitter.com/search?q=%23{{model.hashtag}}&src=typd">
+      {{fa-icon icon="fa-twitter"}}
+      #{{model.hashtag}}
+    </a>
+  </div>
+</div>
+
 {{#s-map latitude=model.latitude longitude=model.longitude zoom=13 as |map|}}
   {{#s-map-layer map=map as |layer|}}
     {{s-map-marker layer=layer latitude=model.latitude longitude=model.longitude}}
