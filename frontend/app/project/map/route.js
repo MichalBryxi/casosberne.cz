@@ -2,11 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    didTransition: function() {
+    didTransition() {
       this.send('setFullscreen', true);
       return true;
     },
-    willTransition: function() {
+    willTransition() {
       this.send('setFullscreen', false);
       return true;
     }
