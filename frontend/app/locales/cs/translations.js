@@ -4,6 +4,7 @@ export default {
     home: 'Domů',
     projects: 'Projekty',
     contact: 'Kontakt',
+    timelapsters: 'Stojany',
     about: 'O projektu'
   },
 
@@ -24,6 +25,13 @@ export default {
       heading: 'Prohlížej',
       message: 'Systém fotografie najde, posbírá a zařadí do jednotlivých <a href="/#/projects">projektů</a>.'
     }
+  },
+
+  timelapsters: {
+    heading: 'Stojany',
+    design: 'Design stojanů',
+    list: 'Seznam projektů',
+    map: 'Mapa projektů'
   },
 
   projects: {
