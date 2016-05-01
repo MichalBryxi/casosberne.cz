@@ -1,0 +1,43 @@
+<h2>{{t 'timelapsters.heading'}}</h2>
+
+<div class="row">
+  <div class="col s3">
+    <h4>{{t 'timelapsters.design'}}</h4>
+    <img class="responsive-img" src="/images/tajmlapster.jpg" />
+  </div>
+
+  <div class="col s9">
+    <h4>{{t 'timelapsters.list'}}</h4>
+    <div class="collection">
+      {{#each model as |project|}}
+        {{#link-to 'project' project.id class='collection-item'}}
+          #{{project.hashtag}}
+        {{/link-to}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <h3>{{t 'timelapsters.map'}}</h3>
+    {{#s-map latitude=49.8894 longitude=14.430256 zoom=7 as |map|}}
+      {{#s-map-layer map=map as |layer|}}
+        {{#each model as |project|}}
+          {{#s-map-marker layer=layer latitude=project.latitude longitude=project.longitude as |marker|}}
+            {{#s-map-card marker=marker header=project.name}}
+              <ul>
+                <li>{{gps-chip model=project}}</li>
+                <li>
+                  {{#link-to 'project' project.id}}
+                    #{{project.hashtag}}
+                  {{/link-to}}
+                </li>
+              </ul>
+            {{/s-map-card}}
+          {{/s-map-marker}}
+        {{/each}}
+      {{/s-map-layer}}
+    {{/s-map}}
+  </div>
+</div>

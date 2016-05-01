@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('description');
     this.route('map');
   });
+  this.route('timelapsters');
 });
 
 export default Router;
