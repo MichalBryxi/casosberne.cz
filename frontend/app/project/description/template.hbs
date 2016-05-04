@@ -26,8 +26,8 @@
   {{~ md-text text=model.description ~}}
 </p>
 
-<div class="row">
-  {{#photo-swipe items=photosSorted as |elm|}}
+<div class="row project-posts">
+  {{#photo-swipe items=posts as |elm|}}
     <div class="col s6 m4 l3">
       {{x-post post=elm}}
     </div>
