@@ -35,8 +35,10 @@ export default {
     heading: 'Stojany',
     design: 'Design stojanů',
     list: 'Seznam projektů',
-    map: 'Mapa projektů',
-    projectLink: 'Projekt'
+    projectLink: 'Projekt',
+    switchLabel: 'Zobrazit jako',
+    switchOn: 'mapu',
+    switchOff: 'seznam'
   },
 
   projects: {

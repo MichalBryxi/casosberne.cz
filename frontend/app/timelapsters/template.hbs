@@ -1,43 +1,58 @@
-<h2>{{t 'timelapsters.heading'}}</h2>
 
-<div class="row">
-  <div class="col s3">
-    <h4>{{t 'timelapsters.design'}}</h4>
-    <img class="responsive-img" src="/images/tajmlapster.jpg" />
-  </div>
+<p class="switch">
+  <span class="switch-label">
+    {{t 'timelapsters.switchLabel'}}:
+  </span>
 
-  <div class="col s9">
-    <h4>{{t 'timelapsters.list'}}</h4>
-    <div class="collection">
-      {{#each model as |project|}}
-        {{#link-to 'project' project.id class='collection-item'}}
-          #{{project.hashtag}}
-        {{/link-to}}
-      {{/each}}
+  {{md-switch tagName='span'
+              checked=showMap
+              class='right'
+              onLabel=(t 'timelapsters.switchOn')
+              offLabel=(t 'timelapsters.switchOff')}}
+</p>
+
+{{#if showMap}}
+  <div class="row">
+    <div class="col s12">
+      {{#s-map latitude=49.8894 longitude=14.430256 zoom=7 as |map|}}
+        {{#s-map-layer map=map as |layer|}}
+          {{#each model as |project|}}
+            {{#s-map-marker layer=layer latitude=project.latitude longitude=project.longitude as |marker|}}
+              {{#s-map-card marker=marker header=project.name}}
+                <ul>
+                  <li>{{gps-chip model=project}}</li>
+                  <li>
+                    {{#link-to 'project' project.id}}
+                      #{{project.hashtag}}
+                    {{/link-to}}
+                  </li>
+                </ul>
+              {{/s-map-card}}
+            {{/s-map-marker}}
+          {{/each}}
+        {{/s-map-layer}}
+      {{/s-map}}
     </div>
   </div>
-</div>
+{{else}}
+  <div class="row">
+    <div class="col s4">
+      {{#md-card title=(t 'timelapsters.design')
+                 image="/images/tajmlapster.jpg"}}
 
-<div class="row">
-  <div class="col s12">
-    <h3>{{t 'timelapsters.map'}}</h3>
-    {{#s-map latitude=49.8894 longitude=14.430256 zoom=7 as |map|}}
-      {{#s-map-layer map=map as |layer|}}
+        {{#md-card-content}}
+        {{/md-card-content}}
+      {{/md-card}}
+    </div>
+
+    <div class="col s8">
+      <div class="collection">
         {{#each model as |project|}}
-          {{#s-map-marker layer=layer latitude=project.latitude longitude=project.longitude as |marker|}}
-            {{#s-map-card marker=marker header=project.name}}
-              <ul>
-                <li>{{gps-chip model=project}}</li>
-                <li>
-                  {{#link-to 'project' project.id}}
-                    #{{project.hashtag}}
-                  {{/link-to}}
-                </li>
-              </ul>
-            {{/s-map-card}}
-          {{/s-map-marker}}
+          {{#link-to 'project' project.id class='collection-item'}}
+            #{{project.hashtag}}
+          {{/link-to}}
         {{/each}}
-      {{/s-map-layer}}
-    {{/s-map}}
+      </div>
+    </div>
   </div>
-</div>
+{{/if}}
