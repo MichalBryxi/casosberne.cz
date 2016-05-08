@@ -6,10 +6,10 @@ export default Ember.Component.extend({
   }),
 
   latitude: Ember.computed('point', function () {
-    return this.get('point').toWGS84(1)[0];
+    return this.get('point').toWGS84(1)[1];
   }),
 
   longitude: Ember.computed('point', function () {
-    return this.get('point').toWGS84(1)[1];
+    return this.get('point').toWGS84(1)[0];
   })
 });
