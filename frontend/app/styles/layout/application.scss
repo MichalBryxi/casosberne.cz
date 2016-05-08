@@ -1,5 +1,7 @@
 .application-container {
+  // scss-lint:disable PlaceholderInExtend
   @extend .container;
+  // scss-lint:enable PlaceholderInExtend
 
   min-height: calc(100vh - 70px - 20px - 56px);
 }
@@ -21,7 +23,9 @@
   }
 }
 
-.page-footer {
+// scss-lint:disable QualifyingElement
+footer.page-footer {
+// scss-lint:enable QualifyingElement
   background-color: $color-4-1;
 
   .copyright {
@@ -31,7 +35,9 @@
 
   .footer-twitter,
   .footer-github {
+    // scss-lint:disable PlaceholderInExtend
     @extend .right;
+    // scss-lint:enable PlaceholderInExtend
 
     color: $color-3-1;
     padding-left: 1em;
