@@ -8,6 +8,10 @@ export default {
     about: 'O projektu'
   },
 
+  footer: {
+    copyright: 'Michal Bryxí & Roland Martin'
+  },
+
   index: {
     heading: 'Tajm Lapster',
     message: 'Lidé za pomocí svých mobilních telefonů a sociálních sítí vytváří časosběrná videa zajímavých míst.',
