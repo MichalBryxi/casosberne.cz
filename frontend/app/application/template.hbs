@@ -37,6 +37,12 @@
 </div>
 
 <footer class='page-footer'>
-  {{#md-copyright text='Copyright Text' startYear=2016 class='copyright'}}
+  {{#md-copyright text=(t 'footer.copyright') startYear=2016 class='copyright'}}
+    <a class="footer-twitter" href="https://twitter.com/TajmLapster">
+      {{fa-icon 'twitter'}}
+    </a>
+    <a class="footer-github" href="https://github.com/MichalBryxi/casosberne.cz">
+      {{fa-icon 'github'}}
+    </a>
   {{/md-copyright}}
 </footer>
