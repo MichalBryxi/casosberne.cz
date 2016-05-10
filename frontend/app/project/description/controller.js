@@ -5,6 +5,7 @@ import moment from 'moment';
 export default Ember.Controller.extend({
   i18n: Ember.inject.service(),
   sortBy: ['createdAt:desc'],
+  isFormDisplayed: false,
 
   postsSorted: Ember.computed.sort('model.posts', 'sortBy'),
 
@@ -19,5 +20,11 @@ export default Ember.Controller.extend({
     let createdAt = post.get('createdAt');
 
     return { src, w, h, title, createdAt };
-  })
+  }),
+
+  actions: {
+    newPost() {
+      this.toggleProperty('isFormDisplayed');
+    }
+  }
 });
