@@ -1,0 +1,55 @@
+.new-post-send {
+  @extend .modal-action;
+  @extend .modal-close;
+  @extend .waves-effect;
+  @extend .waves-orange;
+  @extend .btn-flat;
+  @extend .agree-button;
+}
+
+.new-post-cancel {
+  @extend .modal-action;
+  @extend .modal-close;
+  @extend .waves-effect;
+  @extend .waves-red;
+  @extend .btn-flat;
+  @extend .cancel-button;
+}
+
+.droppable {
+  outline: 2px dashed $color-4-4;
+  outline-offset: -1em;
+  background-color: $color-4-1;
+  position: relative;
+  padding: 2em;
+
+  // transition-timing-function: ease-in-out;
+  // transition-duration: 0.1s;
+  // transition-property: outline-offset, background-color;
+  //
+  // &:hover {
+  //   outline-offset: -0.5em;
+  //   background-color: $color-4-2;
+  // }
+}
+
+.x-droplet-files {
+  @extend .row;
+}
+
+.x-droplet-file {
+  @extend .col;
+  @extend .s3;
+}
+
+.x-droplet-delete {
+  position: relative;
+  top: 1em;
+  left: -1em;
+}
+
+.x-droplet-hint {
+  font-size: 2vw;
+  text-align: center;
+  color: $color-4-3;
+}

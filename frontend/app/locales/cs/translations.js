@@ -52,8 +52,11 @@ export default {
     projectLink: 'zpátky na projekt',
     newPost: {
       heading: 'Nový příspěvek',
-      body: 'Zpráva'
-    }
+      body: 'Zpráva',
+      send: 'Odeslat',
+      cancel: 'Zrušit'
+    },
+    dragFilesHere: 'Přetáhnutím nahrajete soubor'
   },
 
   contact: {

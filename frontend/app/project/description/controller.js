@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
-    newPost() {
+    toggleForm() {
       this.toggleProperty('isFormDisplayed');
     }
   }

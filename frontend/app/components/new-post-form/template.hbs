@@ -1,0 +1,21 @@
+{{#if isFormDisplayed}}
+  {{#md-modal close='toggleForm' class="modal-fixed-footer"}}
+    <div class="modal-content">
+      <div class="input-field">
+        <input id="new-post-body" type="text" maxlength={{maxLength}} length={{maxLength}} />
+        <label for="new-post-body">{{t 'project.newPost.body'}}</label>
+      </div>
+
+      {{#x-droplet}}{{/x-droplet}}
+    </div>
+
+    <div class="modal-footer">
+      <a class="new-post-send" {{action sendForm}}>
+        {{t 'project.newPost.send'}}
+      </a>
+      <a class="new-post-cancel" {{action toggleForm}}>
+        {{t 'project.newPost.cancel'}}
+      </a>
+    </div>
+  {{/md-modal}}
+{{/if}}

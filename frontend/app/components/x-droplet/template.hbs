@@ -1,38 +1,31 @@
-<h1>Upload Files ({{files.length}} in total)</h1>
+{{#if uploadStatus.uploading}}
+<h3 class="uploading-percentage">Uploaded Percentage: {{uploadStatus.percentComplete}}%</h3>
+{{/if}}
 
-        <ul class="counts">
-            <li class="valid">Valid: {{validFiles.length}}</li>
-            <li class="invalid">Invalid: {{invalidFiles.length}}</li>
-            <li class="uploaded">Uploaded: {{uploadedFiles.length}}</li>
-            <li class="deleted">Deleted: {{deletedFiles.length}}</li>
-        </ul>
+{{#x-droplet-area}}
+  {{#if uploadStatus.error}}
+    <div class="error">An error occurred during the upload process. Please try again later.</div>
+  {{/if}}
 
-        <div class="buttons">
-            <button class="btn" {{action "uploadFiles"}}>Upload All</button>
-            <button class="btn" {{action "clearFiles"}}>Clear</button>
-            <button class="btn" {{action "abortUpload"}}>Abort</button>
+  <div class="x-droplet-files">
+    {{#each validFiles as |file|}}
+      <div class="x-droplet-file">
+        {{#fa-stack size="lg" click=(action "deleteFiles" file) class="x-droplet-delete" as |s|}}
+          {{s.stack-2x "circle"}}
+          {{s.stack-1x "remove" inverse=true}}
+        {{/fa-stack}}
+
+        {{x-droplet-preview image=file class="responsive-img"}}
+      </div>
+    {{else}}
+      <div class="row">
+        <div class="col s12">
+          <div class="x-droplet-hint">
+            <p>{{t 'project.dragFilesHere'}}</p>
+            {{fa-icon "cloud-upload" size="2"}}
+          </div>
         </div>
-
-        {{#if uploadStatus.uploading}}
-            <h3 class="uploading-percentage">Uploaded Percentage: {{uploadStatus.percentComplete}}%</h3>
-        {{/if}}
-
-        {{#x-droplet-area}}
-
-            {{#if uploadStatus.error}}
-                <div class="error">An error occurred during the upload process. Please try again later.</div>
-            {{/if}}
-
-            {{#each validFiles as |file|}}
-
-            <div class="file">
-                {{name}}
-                <a class="remove" {{action "deleteFiles" file}}>Discard.</a>
-                {{x-droplet-preview image=file}}
-            </div>
-
-            {{/each}}
-
-            {{x-droplet-input}}
-
-        {{/x-droplet-area}}
+      </div>
+    {{/each}}
+  </div>
+{{/x-droplet-area}}

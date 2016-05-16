@@ -36,28 +36,8 @@
 
 {{#md-fixed-btns class="fixed-btns-example click-to-toggle"
               	 btnIcon="mdi-content-add"
-      	         action="newPost"
+      	         action="toggleForm"
 	               btnClass="btn-large red"}}
 {{/md-fixed-btns}}
 
-{{#if isFormDisplayed}}
-  {{#md-modal close='closeModal' class="test-modal"}}
-    <div class="modal-content">
-      <h4>{{t 'project.newPost.heading'}}</h4>
-      {{md-textarea label=(t 'project.newPost.body')
-                    value=message}}
-
-      --
-      {{#x-droplet}}moo{{/x-droplet}}
-      --
-    </div>
-    <div class="modal-footer">
-      <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
-        Done!
-      </a>
-      <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
-        Cancel
-      </a>
-    </div>
-  {{/md-modal}}
-{{/if}}
+{{new-post-form isFormDisplayed=isFormDisplayed toggleForm=(action "toggleForm")}}
