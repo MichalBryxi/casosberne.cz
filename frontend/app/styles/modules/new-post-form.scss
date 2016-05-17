@@ -37,13 +37,19 @@
 
 .x-droplet-files {
   @extend .row;
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .x-droplet-file {
   @extend .col;
-  @extend .s3;
+  @extend .s6;
+  @extend .offset-s3;
   position: relative;
+
+  img {
+    @extend .responsive-img;
+    width: 100%;
+  }
 
   .fa {
     cursor: pointer;
