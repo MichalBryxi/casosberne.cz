@@ -1,5 +1,9 @@
 // scss-lint:disable PlaceholderInExtend
 
+.mdi-content-add:before {
+    content: '+';
+}
+
 .new-post-send {
   @extend .modal-action;
   @extend .modal-close;
