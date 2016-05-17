@@ -109,6 +109,7 @@ GEM
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     mime-types (2.99)
+    mimemagic (0.3.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multipart-post (2.0.0)
@@ -117,6 +118,12 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     open_uri_redirections (0.2.1)
+    paperclip (5.0.0.beta2)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -176,6 +183,7 @@ DEPENDENCIES
   jsonapi-resources
   nokogiri
   open_uri_redirections
+  paperclip (~> 5.0.0.beta1)
   pg
   rails!
   rails_12factor

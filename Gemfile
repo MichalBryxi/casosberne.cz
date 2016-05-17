@@ -10,6 +10,7 @@ gem 'pg'
 gem 'nokogiri'
 gem 'open_uri_redirections'
 gem 'cloudinary'
+gem "paperclip", "~> 5.0.0.beta1"
 
 group :development, :test do
   gem 'dotenv-rails'
