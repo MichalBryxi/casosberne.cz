@@ -40,4 +40,4 @@
 	               btnClass="btn-large red"}}
 {{/md-fixed-btns}}
 
-{{new-post-form isFormDisplayed=isFormDisplayed toggleForm=(action "toggleForm")}}
+{{new-post-form project=model isFormDisplayed=isFormDisplayed toggleForm=(action "toggleForm") sendForm=(action "sendForm")}}

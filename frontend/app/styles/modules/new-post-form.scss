@@ -1,3 +1,5 @@
+// scss-lint:disable PlaceholderInExtend
+
 .new-post-send {
   @extend .modal-action;
   @extend .modal-close;
@@ -35,17 +37,31 @@
 
 .x-droplet-files {
   @extend .row;
+  padding-bottom: 0;
 }
 
 .x-droplet-file {
   @extend .col;
   @extend .s3;
+  position: relative;
+
+  .fa {
+    cursor: pointer;
+    opacity: .2;
+    transition-duration: .2s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover .fa {
+    opacity: 1;
+  }
 }
 
 .x-droplet-delete {
-  position: relative;
-  top: 1em;
-  left: -1em;
+  position: absolute;
+  left: calc(50% - 1em);
+  top: calc(50% - 1em);
 }
 
 .x-droplet-hint {
