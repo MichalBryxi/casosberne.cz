@@ -49,7 +49,14 @@ export default {
     allProjects: 'všechny projekty',
     description: 'Popis',
     map: 'Mapa',
-    projectLink: 'zpátky na projekt'
+    projectLink: 'zpátky na projekt',
+    newPost: {
+      heading: 'Nový obrázek pro #{{hashtag}}',
+      message: 'Zpráva',
+      send: 'Odeslat',
+      cancel: 'Zrušit'
+    },
+    dragFilesHere: 'Přetáhnutím nahrajete soubor'
   },
 
   contact: {

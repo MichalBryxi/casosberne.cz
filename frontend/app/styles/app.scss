@@ -1,8 +1,14 @@
+// Fix for Roboto font path
+$roboto-font-path: '../assets/';
+// Materialize styles
 @import 'materialize';
+// ember-cli-materialize styles
 @import 'ember-cli-materialize';
+
 @import 'modules/colors';
 @import 'modules/fonts';
 @import 'modules/x-post';
+@import 'modules/new-post-form';
 
 @import 'layout/application';
 @import 'layout/index';

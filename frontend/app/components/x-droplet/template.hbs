@@ -1,0 +1,31 @@
+{{#if uploadStatus.uploading}}
+<h3 class="uploading-percentage">Uploaded Percentage: {{uploadStatus.percentComplete}}%</h3>
+{{/if}}
+
+{{#x-droplet-area}}
+  {{#if uploadStatus.error}}
+    <div class="error">An error occurred during the upload process. Please try again later.</div>
+  {{/if}}
+
+  <div class="x-droplet-files">
+    {{#each validFiles as |file|}}
+      <div class="x-droplet-file">
+        {{x-droplet-preview image=file}}
+
+        {{#fa-stack size="lg" click=(action "deleteFiles" file) class="x-droplet-delete" as |s|}}
+          {{s.stack-2x "circle"}}
+          {{s.stack-1x "remove" inverse=true}}
+        {{/fa-stack}}
+      </div>
+    {{else}}
+      <div class="row">
+        <div class="col s12">
+          <div class="x-droplet-hint">
+            <p>{{t 'project.dragFilesHere'}}</p>
+            {{fa-icon "cloud-upload" size="2"}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/x-droplet-area}}
