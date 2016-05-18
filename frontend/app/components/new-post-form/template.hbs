@@ -5,18 +5,18 @@
         {{t 'project.newPost.heading' hashtag=project.hashtag}}
       </h5>
 
-      <div class="input-field">
-        <input id="new-post-message" type="text" maxlength={{maxLength}} length={{maxLength}} />
+      {{!-- <div class="input-field">
+        <input id="new-post-message" value={{message}} type="text" maxlength={{maxLength}} length={{maxLength}} />
         <label for="new-post-message">{{t 'project.newPost.message'}}</label>
-      </div>
+      </div> --}}
 
-      {{#x-droplet}}{{/x-droplet}}
+      {{#x-droplet message=message}}{{/x-droplet}}
     </div>
 
     <div class="modal-footer">
-      <a class="new-post-send" {{action sendForm}}>
+      {{!-- <a class="new-post-send" {{action sendForm}}>
         {{t 'project.newPost.send'}}
-      </a>
+      </a> --}}
       <a class="new-post-cancel" {{action toggleForm}}>
         {{t 'project.newPost.cancel'}}
       </a>
