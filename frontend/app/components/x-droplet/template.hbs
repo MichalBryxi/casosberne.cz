@@ -1,8 +1,10 @@
 {{#if uploadStatus.uploading}}
-<h3 class="uploading-percentage">Uploaded Percentage: {{uploadStatus.percentComplete}}%</h3>
+  <p class="uploading-percentage">
+    Uploaded Percentage: {{uploadStatus.percentComplete}}%
+  </p>
 {{/if}}
 
-{{#x-droplet-area click=(action "chooseFile")}}
+{{#x-droplet-area}}
   {{#if uploadStatus.error}}
     <div class="error">An error occurred during the upload process. Please try again later.</div>
   {{/if}}
@@ -11,7 +13,6 @@
     {{#each validFiles as |file|}}
       <div class="x-droplet-file">
         {{x-droplet-preview image=file}}
-
         {{#fa-stack size="lg" click=(action "deleteFiles" file) class="x-droplet-delete" as |s|}}
           {{s.stack-2x "circle"}}
           {{s.stack-1x "remove" inverse=true}}
@@ -28,6 +29,4 @@
       </div>
     {{/each}}
   </div>
-
-  {{x-droplet-input choosingFile=choosingFile fileWasChosen=(action "fileWasChosen")}}
 {{/x-droplet-area}}

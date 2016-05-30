@@ -6,20 +6,14 @@ export default Ember.Component.extend(Droplet, {
       maximumValidFiles: 1,
       uploadImmediately: false
   },
-  choosingFile: false,
-
-  actions: {
-    chooseFile() {
-      this.set('choosingFile', true);
-    },
-    fileWasChosen() {
-      this.set('choosingFile', false);
-    }
-  },
 
   didReceiveAttrs(attrs) {
     if(attrs.newAttrs.sending.value === true) {
-      this.set('options.requestPostData', {message: this.get('message')});
+      let postData = {
+        message: this.get('message'),
+        'project_id': this.get('projectId')
+      }
+      this.set('options.requestPostData', postData);
       this.send('uploadFiles');
       this.get('didSendForm')();
     }

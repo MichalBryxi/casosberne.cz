@@ -16,7 +16,9 @@ export default Ember.Component.extend({
       this.set('sending', true);
     },
     didSendForm() {
-      console.log('form was sent');
+      this.set('sending', false);
+      this.get('toggleForm')();
+      this.set('message', '');
     }
   }
 });
