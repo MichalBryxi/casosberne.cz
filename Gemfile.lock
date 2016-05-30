@@ -125,6 +125,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.18.4)
+    puma (3.4.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -185,6 +186,7 @@ DEPENDENCIES
   open_uri_redirections
   paperclip (~> 5.0.0.beta1)
   pg
+  puma
   rails!
   rails_12factor
   twitter

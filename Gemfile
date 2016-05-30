@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.1.7"
 
+gem 'puma'
 gem 'rails', github: "rails/rails", branch: "4-2-stable"
 gem 'rails_12factor', group: [:staging, :production]
 gem 'jsonapi-resources'

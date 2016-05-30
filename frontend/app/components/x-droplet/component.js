@@ -4,7 +4,13 @@ export default Ember.Component.extend(Droplet, {
   url: `${location.origin}/api/v1/tweets`,
   options: {
       maximumValidFiles: 1,
-      uploadImmediately: false
+      uploadImmediately: false,
+  },
+
+  hooks: {
+    didUpload: function() {
+      this.get('didSendForm')();
+    }
   },
 
   didReceiveAttrs(attrs) {
@@ -15,7 +21,6 @@ export default Ember.Component.extend(Droplet, {
       }
       this.set('options.requestPostData', postData);
       this.send('uploadFiles');
-      this.get('didSendForm')();
     }
   }
 });
