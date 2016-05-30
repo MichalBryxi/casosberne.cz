@@ -25,10 +25,6 @@ export default Ember.Controller.extend({
   actions: {
     toggleForm() {
       this.toggleProperty('isFormDisplayed');
-    },
-
-    sendForm(image, message) {
-
     }
   }
 });

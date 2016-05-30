@@ -28,6 +28,7 @@
   background-color: $color-4-1;
   position: relative;
   padding: 2em;
+  cursor: pointer;
 
   // transition-timing-function: ease-in-out;
   // transition-duration: 0.1s;
@@ -37,6 +38,10 @@
   //   outline-offset: -0.5em;
   //   background-color: $color-4-2;
   // }
+
+  input[type="file"] {
+    display: none;
+  }
 }
 
 .x-droplet-files {
