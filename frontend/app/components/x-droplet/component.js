@@ -6,6 +6,16 @@ export default Ember.Component.extend(Droplet, {
       maximumValidFiles: 1,
       uploadImmediately: false
   },
+  choosingFile: false,
+
+  actions: {
+    chooseFile() {
+      this.set('choosingFile', true);
+    },
+    fileWasChosen() {
+      this.set('choosingFile', false);
+    }
+  },
 
   didReceiveAttrs(attrs) {
     if(attrs.newAttrs.sending.value === true) {
