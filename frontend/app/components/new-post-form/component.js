@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   maxLength: 100,
-  message: 'foobar',
+  message: '',
   sending: false,
 
   didInsertElement() {
