@@ -14,7 +14,8 @@ module Api
         @tweet = Tweet.new(tweet_params)
         @tweet.save!
 
-        $twitter.update_with_media(tweet_params[:message], tweet_params[:image])
+        image = open(URI.parse(URI.encode(@tweet.image.url(:medium))))
+        $twitter.update_with_media(@tweet.message, image)
 
         render json: @tweet
       end
