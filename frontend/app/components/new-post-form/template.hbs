@@ -1,10 +1,6 @@
 {{#if isFormDisplayed}}
   {{#md-modal close=toggleForm isFooterFixed=true}}
     <div class="modal-content">
-      <h5>
-        {{t 'project.newPost.heading' hashtag=project.hashtag}}
-      </h5>
-
       {{#x-droplet message=message
                    projectId=project.id
                    sending=sending
@@ -15,12 +11,13 @@
     </div>
 
     <div class="modal-footer">
-      <a class="new-post-send" {{action "sendForm"}}>
-        {{t 'project.newPost.send'}}
-      </a>
-      <a class="new-post-cancel" {{action toggleForm}}>
-        {{t 'project.newPost.cancel'}}
-      </a>
+      {{md-btn text=(t 'project.newPost.send')
+               action='sendForm'
+               class='new-post-send'
+               icon='fa fa-cloud-upload'}}
+      {{md-btn text=(t 'project.newPost.cancel')
+               action=toggleForm
+               class='new-post-cancel'}}
     </div>
   {{/md-modal}}
 {{/if}}

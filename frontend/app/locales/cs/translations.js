@@ -51,7 +51,6 @@ export default {
     map: 'Mapa',
     projectLink: 'zpátky na projekt',
     newPost: {
-      heading: 'Nový obrázek pro #{{hashtag}}',
       message: 'Zpráva',
       send: 'Odeslat',
       cancel: 'Zrušit'
