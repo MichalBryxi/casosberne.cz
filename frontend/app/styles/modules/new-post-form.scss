@@ -1,25 +1,17 @@
 // scss-lint:disable PlaceholderInExtend
 
-.mdi-content-add:before {
-    content: '+';
+
+
+.modal {
+  .new-post-cancel {
+    @extend .btn-flat;
+    margin-right: 1em;
+  }
 }
 
-.new-post-send {
-  @extend .modal-action;
-  @extend .modal-close;
-  @extend .waves-effect;
-  @extend .waves-orange;
-  @extend .btn-flat;
-  @extend .agree-button;
-}
-
-.new-post-cancel {
-  @extend .modal-action;
-  @extend .modal-close;
-  @extend .waves-effect;
-  @extend .waves-red;
-  @extend .btn-flat;
-  @extend .cancel-button;
+.new-post-toggle {
+  @extend .btn-large;
+  @extend .red;
 }
 
 .droppable {
