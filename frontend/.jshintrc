@@ -4,6 +4,7 @@
     "document",
     "window",
     "-Promise",
+    "Droplet",
     "SMap"
   ],
   "browser": true,

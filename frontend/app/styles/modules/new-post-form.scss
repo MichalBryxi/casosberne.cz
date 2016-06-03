@@ -18,7 +18,7 @@
   padding: 2em;
   position: relative;
 
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
   transition-property: outline-offset, background-color;
   transition-timing-function: ease-in-out;
 
@@ -69,6 +69,6 @@
 
 .x-droplet-hint {
   color: $color-4-3;
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
 }
