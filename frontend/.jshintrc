@@ -3,7 +3,8 @@
     "server",
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "SMap"
   ],
   "browser": true,
   "boss": true,
