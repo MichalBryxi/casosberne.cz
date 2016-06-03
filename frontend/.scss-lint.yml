@@ -1,4 +1,4 @@
-scss_files: 'frontend/app/styles/**/*.scss'
+scss_files: 'app/styles/**/*.scss'
 
 linters:
   PlaceholderInExtend:
