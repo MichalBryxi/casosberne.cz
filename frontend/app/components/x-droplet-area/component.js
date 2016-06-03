@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend(Droplet.Area, {
   isChoosingFile: false,
 
-  click(foo) {
+  click() {
     this.set('isChoosingFile', true);
   },
 

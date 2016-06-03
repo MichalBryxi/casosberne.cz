@@ -1,3 +1,5 @@
+// jscs:disable requireSpread
+
 import { module } from 'qunit';
 import startApp from '../helpers/start-app';
 import destroyApp from '../helpers/destroy-app';
@@ -8,13 +10,13 @@ export default function(name, options = {}) {
       this.application = startApp();
 
       if (options.beforeEach) {
-        options.beforeEach(...arguments);
+        options.beforeEach.apply(this, arguments);
       }
     },
 
     afterEach() {
       if (options.afterEach) {
-        options.afterEach(...arguments);
+        options.afterEach.apply(this, arguments);
       }
 
       destroyApp(this.application);

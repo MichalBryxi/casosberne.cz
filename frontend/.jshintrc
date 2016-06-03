@@ -3,7 +3,9 @@
     "server",
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "Droplet",
+    "SMap"
   ],
   "browser": true,
   "boss": true,

@@ -13,6 +13,7 @@ before_install:
   - npm config set spin false
   - npm install -g bower
   - npm install phantomjs-prebuilt
+  - gem install scss_lint --no-ri
 
 install:
   - cd frontend
@@ -21,6 +22,7 @@ install:
 
 script:
   - npm test
+  - scss-lint
 
 env:
   - CXX=g++-4.8

@@ -3,29 +3,32 @@
   cursor: pointer;
 
   .card-image {
+    overflow-y: hidden;
+
     .card-title {
       font-size: 1em;
       padding: 5px;
-      text-shadow: 2px 2px 8px #000;
+      text-shadow: 2px 2px 8px $color-2-4;
     }
 
     .thumb {
       height: 100%;
-      object-position: 100% 50%;
       object-fit: cover;
+      object-position: 100% 50%;
     }
-
-    overflow-y: hidden;
 
     @media #{$small-and-down} {
       // styles for small screens and down
     }
+
     @media #{$medium-and-up} {
       height: 10em;
     }
+
     @media #{$medium-and-down} {
       height: 10em;
     }
+
     @media #{$large-and-up} {
       height: 8em;
     }
