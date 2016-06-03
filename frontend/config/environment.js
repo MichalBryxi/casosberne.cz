@@ -7,6 +7,7 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'hash',
     EmberENV: {
+      LOG_STACKTRACE_ON_DEPRECATION: false,
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
