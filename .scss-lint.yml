@@ -1,0 +1,7 @@
+scss_files: 'frontend/app/styles/**/*.scss'
+
+linters:
+  PlaceholderInExtend:
+    enabled: false
+  LeadingZero:
+    enabled: false
