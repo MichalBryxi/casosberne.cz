@@ -21,6 +21,7 @@ install:
 
 script:
   - npm test
+  - scss-lint
 
 env:
   - CXX=g++-4.8
