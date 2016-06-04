@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
 
   posts: Ember.computed.map('postsSorted', function(post) {
     let date = moment(post.get('createdAt')).format('DD.MM.');
-    let body = linkify(post.getWithDefault('body', ''));
+    let body = linkify([post.getWithDefault('body', '')]);
 
     let title = `${date} - ${body}`;
     let w = 600;
