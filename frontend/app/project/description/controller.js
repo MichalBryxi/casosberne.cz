@@ -19,7 +19,10 @@ export default Ember.Controller.extend({
     let title = `${date} - ${body} - ${userUrl}`;
     let w = 600;
     let h = 338;
-    let src = post.getWithDefault('image', this.get('defaultImage'));
+    let src = post.getWithDefault('image');
+    if(Ember.isEmpty(src)) {
+      src = this.get('defaultImage');
+    }
     let createdAt = post.get('createdAt');
 
     return { src, w, h, title, createdAt };
