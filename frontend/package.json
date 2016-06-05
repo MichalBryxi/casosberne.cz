@@ -52,6 +52,7 @@
     "ember-legacy-views": "^0.2.0",
     "ember-linkify": "2.3.0",
     "ember-load-initializers": "^0.5.1",
+    "ember-lodash": "0.0.7",
     "ember-material-design-icons-shim": "0.1.4",
     "ember-materialize-shim": "0.1.6",
     "ember-modal-dialog": "0.8.4",
