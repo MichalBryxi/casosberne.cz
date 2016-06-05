@@ -20,6 +20,8 @@ class Project < ActiveRecord::Base
       puts "Creating new post with body: #{tweet.text}"
       post = Post.create({
         body: tweet.text,
+        user: tweet.user.screen_name,
+        payload: tweet.to_json,
         project: self
       })
       post.save!
